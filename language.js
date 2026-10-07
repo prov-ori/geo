@@ -5,3 +5,4 @@ for(const [id,name]of [['ru','Русский'],['et','Eesti']]){const b=document
 document.querySelector('.topbar').insertBefore(controls,document.querySelector('.profile'));
 if(lang==='et'){for(const [s,t]of [['.skip','Sisu juurde'],['.brand span','õpi avastama'],['.nav-label','SINU AVASTUSRETK'],['.sidebar-bottom>a','Õppekava ja allikad ↗'],['.search-link span','Leia teema või mõiste']]){const e=document.querySelector(s);if(e)e.textContent=t;}document.querySelector('.estonia span').innerHTML='Gümnaasium · Eesti<br><small>Eesti + vene mõisted</small>';document.querySelector('.profile').setAttribute('aria-label','Minu edenemine');document.querySelector('.profile').textContent='M';document.querySelector('footer').innerHTML='GEO · Õpi maailma mõistma.<span>Gümnaasiumi kolme kursuse õppekavade alusel</span>';}
 await import(lang==='et'?'./app-et.js':'./app.js');
+await import('./mobile.js');
